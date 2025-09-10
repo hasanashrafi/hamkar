@@ -29,7 +29,7 @@ function SigninPage() {
             if (res.ok) {
                 toast.success(" ورود با موفقیت انجام شد")
 
-                router.replace("/");
+                router.replace("/dashboard");
 
             } else {
                 toast.error("مشکلی پیش آمده است")
