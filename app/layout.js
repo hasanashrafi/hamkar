@@ -1,8 +1,5 @@
 import localFont from "next/font/local";
-
 import "./globals.css";
-
-
 
 const myFont = localFont({
   src: [
@@ -19,15 +16,13 @@ export const metadata = {
   description: "hamkar app for all people need a job",
 };
 
-import ToastProvider from '../components/ui/ToastProvider';
+import Header from "@/components/layout/Header";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fa" dir="rtl">
-      <body
-        className={`${myFont.variable} font-sans`}
-      >
-        <ToastProvider />
+    <html lang="fa" dir="rtl" className={myFont.variable}>
+      <body className="bg-white text-black">
+        <Header />
         {children}
       </body>
     </html>
