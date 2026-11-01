@@ -7,4 +7,6 @@
 
 body {
   font-family: var(--font-family-dana);
+  background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 40%);
+  color: #0f172a;
 }

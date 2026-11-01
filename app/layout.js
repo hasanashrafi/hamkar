@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import { CartProvider } from "@/components/shop/CartProvider";
 
 const myFont = localFont({
   src: [
@@ -12,18 +15,19 @@ const myFont = localFont({
 });
 
 export const metadata = {
-  title: "Hamkar",
-  description: "hamkar app for all people need a job",
+  title: "فروشگاه حبوبات",
+  description: "فروش و ثبت سفارش عدس، لوبیا، نخود و سایر حبوبات",
 };
-
-import Header from "@/components/layout/Header";
 
 export default function RootLayout({ children }) {
   return (
     <html lang="fa" dir="rtl" className={myFont.variable}>
-      <body className="bg-white text-black">
-        <Header />
-        {children}
+      <body className="min-h-screen bg-white text-slate-900">
+        <CartProvider>
+          <Header />
+          {children}
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );

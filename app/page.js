@@ -1,19 +1,21 @@
+import Catalog from "@/components/shop/Catalog";
+import { getProducts } from "@/lib/store";
 
+export const dynamic = "force-dynamic";
 
-export default function Home() {
+export default async function Home() {
+  const products = await getProducts();
+
   return (
-    <>
-      <div className="container min-h-screen mx-auto bg-slate-900">
-      
-        <div className="relative w-full  h-[400px]   bg-cover bg-no-repeat bg-center">
-        </div>
-        <div className='absolute top-1/2 right-0 -translate-x-1/5 -translate-y-1/2'  >
-          <p className=' text-white text-6xl font-bold'>اینجا کاریابی نیست</p>
-          <p className=' text-white text-2xl font-bold mt-5'>اینجا استعداد پیدا میکنی</p>
-        </div>
-
-      </div>
-      
-    </>
+    <main className="mx-auto max-w-7xl px-4 py-8">
+      <section className="mb-8 rounded-3xl bg-emerald-800 px-6 py-10 text-white">
+        <p className="text-sm text-emerald-100">فروش عمده و جزئی</p>
+        <h1 className="mt-2 text-3xl font-bold sm:text-4xl">فروشگاه حبوبات</h1>
+        <p className="mt-3 max-w-xl text-emerald-50">
+          عدس، لوبیا، نخود و لپه را به کیلو انتخاب کنید و سفارش خود را ثبت کنید.
+        </p>
+      </section>
+      <Catalog products={products} />
+    </main>
   );
 }

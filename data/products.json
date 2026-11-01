@@ -1,0 +1,82 @@
+[
+  {
+    "id": "lentil-red",
+    "name": "عدس قرمز",
+    "slug": "lentil-red",
+    "pricePerKg": 89000,
+    "stockKg": 120,
+    "category": "عدس",
+    "image": "/products/lentil.svg",
+    "description": "عدس قرمز پوست‌کنده، مناسب سوپ و خورشت."
+  },
+  {
+    "id": "lentil-green",
+    "name": "عدس سبز",
+    "slug": "lentil-green",
+    "pricePerKg": 95000,
+    "stockKg": 80,
+    "category": "عدس",
+    "image": "/products/lentil.svg",
+    "description": "عدس سبز درشت برای عدسی و سالاد."
+  },
+  {
+    "id": "bean-red",
+    "name": "لوبیا قرمز",
+    "slug": "bean-red",
+    "pricePerKg": 118000,
+    "stockKg": 90,
+    "category": "لوبیا",
+    "image": "/products/bean.svg",
+    "description": "لوبیا قرمز اعلا برای خورشت قرمه‌سبزی."
+  },
+  {
+    "id": "bean-white",
+    "name": "لوبیا سفید",
+    "slug": "bean-white",
+    "pricePerKg": 125000,
+    "stockKg": 70,
+    "category": "لوبیا",
+    "image": "/products/bean.svg",
+    "description": "لوبیا سفید درشت، مناسب خوراک و کنسرو خانگی."
+  },
+  {
+    "id": "bean-pinto",
+    "name": "لوبیا چیتی",
+    "slug": "bean-pinto",
+    "pricePerKg": 112000,
+    "stockKg": 100,
+    "category": "لوبیا",
+    "image": "/products/bean.svg",
+    "description": "لوبیا چیتی تازه، مناسب لوبیاپلو."
+  },
+  {
+    "id": "chickpea",
+    "name": "نخود",
+    "slug": "chickpea",
+    "pricePerKg": 98000,
+    "stockKg": 150,
+    "category": "نخود",
+    "image": "/products/chickpea.svg",
+    "description": "نخود زرد درشت برای آبگوشت و نخودچی."
+  },
+  {
+    "id": "split-pea",
+    "name": "لپه",
+    "slug": "split-pea",
+    "pricePerKg": 92000,
+    "stockKg": 85,
+    "category": "نخود",
+    "image": "/products/chickpea.svg",
+    "description": "لپه یکدست برای خورشت قیمه."
+  },
+  {
+    "id": "mung",
+    "name": "ماش",
+    "slug": "mung",
+    "pricePerKg": 87000,
+    "stockKg": 60,
+    "category": "سایر",
+    "image": "/products/mung.svg",
+    "description": "ماش پاک‌شده برای سوپ و آش."
+  }
+]

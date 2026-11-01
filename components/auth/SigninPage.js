@@ -1,4 +1,5 @@
 'use client'
+import Cookies from 'js-cookie'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import React, { useState } from 'react'
@@ -28,7 +29,7 @@ function SigninPage() {
             console.log(data);
             if (res.ok) {
                 toast.success(" ورود با موفقیت انجام شد")
-
+                Cookies.set("token", data.token);
                 router.replace("/dashboard");
 
             } else {

@@ -1,50 +1,42 @@
-'use client'
+"use client";
 
-import Cookies from 'js-cookie'
-import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-
+import Link from "next/link";
+import { ShoppingBag } from "lucide-react";
+import { useCart } from "@/components/shop/CartProvider";
 
 function Header() {
-  const [isLogin, setIsLogin] = useState(false)
-  const getToken = Cookies.get("token")
+  const { items } = useCart();
+  const itemCount = items.length;
 
-  useEffect(() => {
-    if (getToken) {
-      setIsLogin(true)
-    }
-  }, [getToken])
   return (
-    <div>
-      <div className='container mx-auto  p-4'>
-        <div className='flex justify-between items-center'>
-          <div className='flex items-center gap-x-3'>
-            <h1 className='text-zinc-700 text-2xl font-bold -tracking-tighter'>همکار</h1>
-
-            <Link href='/'>
-              صفحه اصلی
-            </Link>
-          </div>
-          <div className='flex items-center gap-x-3'>
-            {
-              isLogin ? (
-                <Link href='/dashboard'>
-                  پروفایل
-                </Link>
-              ) : (
-                <Link href='/signup'>
-                  ورود | ثبت نام
-                </Link>
-              )
-            }
-
-
-
-          </div>
+    <header className="sticky top-0 z-20 border-b border-emerald-100 bg-white/90 backdrop-blur">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 p-4">
+        <div className="flex items-center gap-x-4">
+          <Link href="/" className="border-l-2 border-l-emerald-500 pl-4 text-xl font-bold text-slate-800">
+            حبوبات
+          </Link>
+          <Link href="/" className="hidden text-slate-600 hover:text-emerald-600 sm:inline">
+            فروشگاه
+          </Link>
+          <Link href="/admin/orders" className="hidden text-slate-600 hover:text-emerald-600 sm:inline">
+            سفارش‌ها
+          </Link>
         </div>
+        <Link
+          href="/cart"
+          className="relative flex items-center gap-2 rounded-xl bg-emerald-50 px-3 py-2 text-emerald-800 hover:bg-emerald-100"
+        >
+          <ShoppingBag size={18} />
+          <span>سبد خرید</span>
+          {itemCount > 0 ? (
+            <span className="absolute -top-2 -left-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-emerald-600 px-1 text-xs text-white">
+              {itemCount}
+            </span>
+          ) : null}
+        </Link>
       </div>
-    </div>
-  )
+    </header>
+  );
 }
 
-export default Header
+export default Header;
